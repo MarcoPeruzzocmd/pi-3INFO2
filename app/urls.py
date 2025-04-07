@@ -6,15 +6,14 @@ from drf_spectacular.views import (
     SpectacularSwaggerView,
 )
 from rest_framework.routers import DefaultRouter
-
-from core.views import UserViewSet, CategoriaViewSet, EditoraViewSet
+from core.views import UserViewSet, CategoriaViewSet, EditoraViewSet, AutorViewSet
 
 router = DefaultRouter()
 
 router.register(r'categorias', CategoriaViewSet, basename='categorias')
 router.register(r'usuarios', UserViewSet, basename='usuarios')
 router.register(r"editoras", EditoraViewSet)
-
+router.register(r"autores", AutorViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
