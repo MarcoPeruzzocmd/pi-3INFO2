@@ -3,10 +3,6 @@ from .categorias import Categorias
 from .editora import Editora
 from uploader.models import Image
 
-
-
-
-
 class Livro(models.Model):
     titulo = models.CharField(max_length=255)
     isbn = models.CharField(max_length=32, null=True, blank=True)
@@ -22,7 +18,6 @@ class Livro(models.Model):
         blank=True,
         default=None,
     )
-
 
     def __str__(self):
         return f"({self.id}) {self.titulo} {self.quantidade}"
